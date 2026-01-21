@@ -45,7 +45,7 @@ What does it suggest about the length of a proper password. (ie. Use more than a
 6. You have to store a password in a database. Please explain your design/strategy for securely storing it.
 (Hints: Proper hash function, Salting, Cost factor, Database Security)
 
----
+
 
 ## How to run (this repo)
 
@@ -63,7 +63,7 @@ Run:
 - `python exercise2.py`
 - `python exercise3.py --rate <hashes_per_sec> --charset 94 --min-len 6 --max-len 12`
 
----
+
 
 ## Exercise 1 (Dictionary + substitutions)
 
@@ -73,7 +73,7 @@ Target SHA-1:
 Result (found by `exercise1.py` using the 10k list + substitutions):
 - **Password = `ThaiLanD`**
 
----
+
 
 ## Exercise 2 (Hash speed experiment)
 
@@ -86,7 +86,7 @@ Key takeaway:
 - MD5/SHA-1 are extremely fast → attackers can test huge numbers of guesses quickly.
 - bcrypt is intentionally slow (and tunable via cost) → slows down guessing attacks dramatically.
 
----
+
 
 ## Exercise 3 (Brute-force time estimate)
 
@@ -103,7 +103,7 @@ So, for a brute force scenario, this suggests:
 - **Short passwords are very risky**, even with mixed characters.
 - A “proper password” should be long enough that attacks take > 1 year; with these assumptions and this machine, **8+ random characters** already crosses 1 year for SHA-1, and longer is much safer.
 
----
+
 
 ## Exercise 4: If the hash is bcrypt, is brute-force practical?
 
@@ -113,7 +113,7 @@ So, for a brute force scenario, this suggests:
 
 (Attackers can use GPUs/ASICs and parallelism, but bcrypt still massively increases cost vs MD5/SHA‑1. The bigger the cost factor, the harder it gets.)
 
----
+
 
 ## Exercise 5: If the hash is bcrypt, is a rainbow table attack practical?
 
@@ -122,7 +122,6 @@ So, for a brute force scenario, this suggests:
 - Salts force attackers to regenerate their precomputed table reuse per-salt.
 - bcrypt is also slow, so generating tables is expensive.
 
----
 
 ## Exercise 6: Secure password storage design/strategy
 
